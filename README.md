@@ -6,7 +6,7 @@ functionality.
 
 ## Usage
 
-Include the JS script on your page. (The JS is generated from the coffeescript).
+Include the `jquery-ajax-retry.js` script on your page. (The JS is generated from the coffeescript).
 
 ``` javascript
 $.ajax({
@@ -17,8 +17,9 @@ $.ajax({
   error: function(jqXHR, textStatus, httpError) { ... }
 
   // retry options
-  timeout: 3000, // [required] You must provide a timeout to use retries
-  maxTries: 3    // [required] How many times to retry.
+  timeout: 3000,          // [required] You must provide a timeout to use retries
+  maxTries: 3             // [required] How many times to retry.
+  retryCodes: [404, 500]  // [optional] HTTP error codes on which to retry.
 })
 ```
 
