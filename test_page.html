@@ -1,0 +1,41 @@
+<!--
+Compile the test file with $ coffee -cb test.coffee, then serve this page with 'python -m SimpleHTTPServer',
+or similar.
+-->
+<html>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+    <script src="./jquery-ajax-retry.js"></script>
+    <script src="./test.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+      }
+      table {
+        font: bold 50px "Helvetica Neue", "Helvetica", sans-serif;
+        color: #eee;
+        text-shadow: #222 0px 4px 1px;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+      }
+      td { background-color: #555; }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr><td data-name="success">1 successful request without max tries</td></tr>
+      <tr><td data-name="success1Try">1 successful request with 1 max try</td></tr>
+      <tr><td data-name="success3Tries">1 successful request with 3 max tries</td></tr>
+      <tr><td data-name="failure">failure without max tries</td></tr>
+      <tr><td data-name="failure1Try">failure with 1 max try</td></tr>
+      <tr><td data-name="failure3Tries">failure with 3 max tries</td></tr>
+      <tr><td data-name="timeout3Tries">failure with timeout max 3 tries</td></tr>
+    </table>
+  </body>
+</html>
