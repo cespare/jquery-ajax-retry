@@ -1,3 +1,5 @@
+**NOTE: I neither use nor maintain this project anymore.**
+
 This is a simple jquery 'plugin' to help with retrying ajax requests. It's not a real plugin because it
 doesn't use the plugin architecture; rather, it uses a single call to
 [`ajaxPrefilter`](http://api.jquery.com/jQuery.ajaxPrefilter/) to modify the way ajax requests work. This does
